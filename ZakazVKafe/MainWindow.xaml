@@ -1,0 +1,39 @@
+﻿<Window x:Class="ZakazVKafe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZakazVKafe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal" >
+                <CheckBox Content="Чизбургер" Name="CBCheesburger" Click="CBCheesburger_Click" />
+                <TextBox Width="25" Height="25" Margin="20 0 0 0" Name="TxBCheesburger" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Content="Гамбургер" Name="CBGumburger" Click="CBGumburger_Click" />
+                <TextBox Width="25" Height="25" Margin="20.1 0 0 0" Name="TxBGumburger" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Content="Кока-Кола" Name="CBCola" Click="CBCola_Click"/>
+                <TextBox Width="25" Height="25" Margin="20.8 0 0 0" Name="TxBCola" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox Content="Нагетсы" Name="CBNuggets" Click="CBNuggets_Click"/>
+                <TextBox Width="25" Height="25" Margin="33.61 0 0 0" Name="TxBNuggets" IsEnabled="False"/>
+            </StackPanel>
+
+            <Button Name="Order" Content="Заказать" Width="80" Margin="0 5 0 0" Click="Order_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListBox Height="260" Width="370" Name="OrderLB"/>
+        </StackPanel>
+    </Grid>
+</Window>
